@@ -1,0 +1,51 @@
+The project requires 2021.3.3f1
+
+IF for some reason the import from a pro version does not work, or unity states cannot import.  Close Unity, create a project in your version, then browse the provided "Project Template/Assets/_Custom" folder and copy paste items from here, into your project.
+Remove any terrains created in the new project. 
+
+
+The OldPit Terrian is an asset. the file CEC-PIT1.asset is in the Project_Template\Assets\_Custom\OldPit folder.  The textures are referenced here. Select your terrain and remove, then Darg Drop the OldPit from the Assets/_Custom/Oldpit folder into your editor window. Should be located at 0,0,0
+
+Sometimes, Unity has issues with using projects. The best suggestion, is to extract the project, then find all META extention files, then delete. Then re-import.  Unity marks each with Unity Version and misc info.  By removing these, Unity will rebuild its META files for all items. 
+
+the models are custom built, although scale is an issue with physics for trucks (not shovels, shovels are animated).  Older verisons of Unity have no issues, but for some reason the past few years, Unity alters the Scale when importing (drag drop).  The physics engine struggles with tires 14 feet tall, and the colliders have issues with 15000 torque.  
+
+----------------------
+Textures
+Tetures and how they are used changed over the years. When adding a texture, Create Layer, then pick the texture. Expand the properties, and ensure the tiling is set to minimum 15 x 15, you can add the NRM (normal) to the layer and adjust (do not exceed 1.75, looks bad).
+
+For each new texture, repeat.  
+
+Some textures are massive, like the Dump texture. This is a 200x200 tile size. 
+
+------
+Physics
+
+Typically, I use EVP5, with modified VehicleController.cs, and StandardVehicleInput.cs for controlling the vehicles.  
+If you are using EVP5, I have the wheel collider settings. 
+-----------
+Recommended addons from the asset store.
+
+EVP5
+Path Painter (if wanting smooth grades for roads).
+
+-----------
+Mine size and misc info..
+
+Roads must have a berm at axle height to the tallest truck in the fleet. Berms are along the side of roads, and for downhill, in the center.
+
+Haul truck Driving
+Most North america mines are Left Hand drive. But, not all. 
+
+Haul Truck Speed
+Most haul trucks at 300 - 400 tons move about 35 mph max unloaded.
+
+Haul truck Turn radius.
+The komatsu 980 has about a 29.7 degree turn radius. 
+------------
+Shovel
+Bench size, the tip of the shovel is the top of a berm.
+
+Most electric shovels have a wire ball, to grab and move down the bench. Speeds up movement. 
+
+
